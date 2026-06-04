@@ -29,6 +29,7 @@ fbq('track', 'PageView');
   --gold-dim: rgba(208,134,1,0.15);
   --white: #F8F4EE;
   --grey: #8A8A8A;
+  --instruction-red: #c62828;  /* deep, readable red */
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
@@ -322,6 +323,20 @@ footer {
 }
 footer span { color: var(--gold); opacity: 0.6; }
 
+/* INSTRUCTION TEXT STYLES - RED + BOLD */
+.instruction-text {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--instruction-red);
+  text-align: center;
+  max-width: 400px;
+  margin-top: 14px;
+  background: rgba(0,0,0,0.3);
+  padding: 8px 12px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
 /* instruction images styling */
 .instruction-images {
   display: flex;
@@ -339,10 +354,10 @@ footer span { color: var(--gold); opacity: 0.6; }
 }
 .step-label {
   font-size: 0.75rem;
-  color: var(--gold);
+  color: var(--instruction-red);
   margin-top: 8px;
   display: block;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 @media (max-width: 480px) {
@@ -351,6 +366,7 @@ footer span { color: var(--gold); opacity: 0.6; }
   .trust-row { gap: 24px; }
   .stat-bar { gap: 24px; }
   .instruction-img { max-width: 200px; }
+  .instruction-text { font-size: 0.8rem; }
 }
 </style>
 </head>
@@ -363,8 +379,10 @@ footer span { color: var(--gold); opacity: 0.6; }
   <p>Some Nigerians are buying the exact same items you buy — for up to 40% less. Here's how they do it.</p>
   <a href="https://wa.me/2347044593466?text=Add%20me%20to%20the%20group" class="btn-gold">Join WhatsApp Group →</a>
   
-  <!-- Instruction text referencing both images -->
-  <p style="font-size:0.85rem; color:#d08601; font-weight:900; margin-top:14px; text-align:center; max-width:400px;">👆 If Join Chat takes you to Play Store: tap the three dots (⋮) then "Open in WhatsApp" – see the two images below 👇</p>
+  <!-- Instruction text - red & bold -->
+  <div class="instruction-text">
+    👆 If Join Chat takes you to Play Store: tap the three dots (⋮) then "Open in WhatsApp" – see the two images below 👇
+  </div>
   
   <!-- Two images: group1.jpg and group2.jpg -->
   <div class="instruction-images">
@@ -500,8 +518,10 @@ footer span { color: var(--gold); opacity: 0.6; }
   <div class="batch-note">⚡ Current batch is open — limited spots</div>
   <br><br>
   <a href="https://wa.me/2347044593466?text=Add%20me%20to%20the%20group" class="btn-gold">Join WhatsApp Group Now →</a>
-  <!-- Text referencing the images above -->
-  <p style="font-size:0.85rem; color:#d08601; font-weight:900; margin-top:14px; text-align:center; max-width:400px;">👆 If Join Chat takes you to Play Store: tap the three dots (⋮) then "Open in WhatsApp" – see the two images above 👆</p>
+  <!-- Same instruction text - red & bold, referencing images above -->
+  <div class="instruction-text" style="margin-top:14px;">
+    👆 If Join Chat takes you to Play Store: tap the three dots (⋮) then "Open in WhatsApp" – see the two images above 👆
+  </div>
 
 <footer>
   &copy; 2024 <span>Fers Innova Ltd</span> · China to Nigeria, Factory Direct

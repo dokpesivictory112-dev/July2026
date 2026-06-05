@@ -323,11 +323,11 @@ footer {
 }
 footer span { color: var(--gold); opacity: 0.6; }
 
-/* INSTRUCTION TEXT STYLES - RED + BOLD */
+/* INSTRUCTION */
 .instruction-text {
   font-size: 0.9rem;
   font-weight: 700;
-  color: var(--instruction-red);
+  color: #c62828;
   text-align: center;
   max-width: 400px;
   margin-top: 14px;
@@ -336,25 +336,25 @@ footer span { color: var(--gold); opacity: 0.6; }
   border-radius: 12px;
   display: inline-block;
 }
-
-/* instruction images styling */
 .instruction-images {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   margin-top: 20px;
+  width: 100%;
+  max-width: 500px;
 }
 .instruction-img {
-  max-width: 260px;
   width: 100%;
-  border-radius: 16px;
+  max-width: 320px;
+  border-radius: 12px;
   border: 1px solid rgba(208,134,1,0.3);
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 .step-label {
   font-size: 0.75rem;
-  color: var(--instruction-red);
+  color: #c62828;
   margin-top: 8px;
   display: block;
   font-weight: 600;
@@ -365,7 +365,6 @@ footer span { color: var(--gold); opacity: 0.6; }
   .price-card { min-width: 140px; padding: 20px 16px; }
   .trust-row { gap: 24px; }
   .stat-bar { gap: 24px; }
-  .instruction-img { max-width: 200px; }
   .instruction-text { font-size: 0.8rem; }
 }
 </style>
@@ -377,25 +376,29 @@ footer span { color: var(--gold); opacity: 0.6; }
   <div class="badge">🇨🇳 China → 🇳🇬 Nigeria · Direct Sourcing</div>
   <h1>Stop Paying Double For<br><span>The Same Products</span></h1>
   <p>Some Nigerians are buying the exact same items you buy — for up to 40% less. Here's how they do it.</p>
-  <a href="https://wa.me/2347044593466?text=Add%20me%20to%20the%20group" class="btn-gold">Join WhatsApp Group →</a>
-  
-  <!-- Instruction text - red & bold, "Open app" -->
-  <div class="instruction-text">
-    👆 If Open app takes you to Play Store: tap the three dots (⋮) then "Open in WhatsApp" – see the two images below 👇
-  </div>
-  
-  <!-- Two images: group1.jpg and group2.jpg -->
-  <div class="instruction-images">
-    <div>
-      <img src="group1.jpg" alt="Step 1: Tap the three dots" class="instruction-img">
-      <span class="step-label">Step 1 – Tap the three dots (⋮)</span>
+  <a href="https://wa.me/2347044593466?text=I%20want%20to%20join%20the%20group" class="btn-gold">Join WhatsApp Group →</a>
+
+  <p style="margin-top:14px; font-size:0.82rem;">
+    <span onclick="document.getElementById('trouble').style.display=document.getElementById('trouble').style.display==='none'?'block':'none'" style="color:#d08601; font-weight:700; cursor:pointer; text-decoration:underline;">
+      Having trouble joining? Tap here
+    </span>
+  </p>
+
+  <div id="trouble" style="display:none; margin-top:16px; text-align:center;">
+    <p style="font-size:0.85rem; font-weight:700; color:#c62828; margin-bottom:14px; max-width:380px;">
+      If Open app takes you to Play Store: tap the three dots (⋮) at the top right then select "Open in WhatsApp"
+    </p>
+    <div class="instruction-images">
+      <div>
+        <img src="group1.jpg" alt="Step 1: Tap the three dots" class="instruction-img">
+        <span class="step-label">Step 1 – Tap the three dots (⋮)</span>
+      </div>
+      <div>
+        <img src="group2.jpg" alt="Step 2: Select Open in WhatsApp" class="instruction-img">
+        <span class="step-label">Step 2 – Select "Open in WhatsApp"</span>
+      </div>
     </div>
-    <div>
-      <img src="group2.jpg" alt="Step 2: Select Open in WhatsApp" class="instruction-img">
-      <span class="step-label">Step 2 – Select "Open in WhatsApp"</span>
-    </div>
   </div>
-  
   <div class="stat-bar">
     <div class="stat"><span class="stat-num">400+</span><span class="stat-label">Orders Fulfilled</span></div>
     <div class="stat"><span class="stat-num">40%</span><span class="stat-label">Average Savings</span></div>
@@ -517,21 +520,27 @@ footer span { color: var(--gold); opacity: 0.6; }
   <p class="section-sub">Once the batch closes, you wait for the next one. Join now to place your order in this round.</p>
   <div class="batch-note">⚡ Current batch is open — limited spots</div>
   <br><br>
-  <a href="https://wa.me/2347044593466?text=Add%20me%20to%20the%20group" class="btn-gold">Join WhatsApp Group Now →</a>
-  <!-- Same instruction text - red & bold, "Open app" -->
-  <div class="instruction-text" style="margin-top:14px;">
-    👆 If Open app takes you to Play Store: tap the three dots (⋮) then "Open in WhatsApp" – see the two images above 👆
+  <a href="https://wa.me/2347044593466?text=I%20want%20to%20join%20the%20group" class="btn-gold">Join WhatsApp Group Now →</a>
+  <p style="margin-top:14px; font-size:0.82rem;">
+    <span onclick="document.getElementById('trouble2').style.display=document.getElementById('trouble2').style.display==='none'?'block':'none'" style="color:#d08601; font-weight:700; cursor:pointer; text-decoration:underline;">
+      Having trouble joining? Tap here
+    </span>
+  </p>
+  <div id="trouble2" style="display:none; margin-top:16px; text-align:center;">
+    <p style="font-size:0.85rem; font-weight:700; color:#c62828; margin-bottom:14px; max-width:380px;">
+      If Open app takes you to Play Store: tap the three dots (⋮) at the top right then select "Open in WhatsApp"
+    </p>
   </div>
+</div>
 
 <footer>
-  &copy; 2024 <span>Fers Innova Ltd</span> · China to Nigeria, Factory Direct
+  &copy; 2026 <span>Fers Innova Ltd</span> · China to Nigeria, Factory Direct
 </footer>
 
 <script>
 const PIXEL_ID = '950535357880062';
 const CAPI_TOKEN = 'EAGDaJTh2MZCIBRpeQIpnyFa5AacQiODSrc6jgdepVI6SAUUgl7zkIW4ZBGmoZCmUzjsCO5ZAj2g7viEZAsrrRag2sXYirmQ5sYQWIRKjtF3W3BY3MbNKczeKAkgYM6M8GSTaYZAJ0hqpGURjlmfkVCB1QrkQAMVT0p8ajR3xurQ9Nmzjzz9ZCWBf75ZA4RkhNPfrjAZDZD';
 
-// Store fbclid from URL as fbc cookie for better attribution
 (function() {
   const fbclid = new URLSearchParams(window.location.search).get('fbclid');
   if (fbclid) {
@@ -573,9 +582,43 @@ function fireLeadEvent() {
   sendCAPI(eventId);
 }
 
+let leadFired = false;
+
 document.querySelectorAll('a.btn-gold').forEach(btn => {
-  btn.addEventListener('click', function() { fireLeadEvent(); });
+  btn.addEventListener('click', function() {
+    if (!leadFired) {
+      leadFired = true;
+      fireLeadEvent();
+    }
+  });
 });
+
+// Toggle for hero help link
+const heroHelp = document.getElementById('helpLinkHero');
+const heroInstruction = document.getElementById('heroInstruction');
+if (heroHelp && heroInstruction) {
+  heroHelp.addEventListener('click', function() {
+    if (heroInstruction.style.display === 'flex') {
+      heroInstruction.style.display = 'none';
+    } else {
+      heroInstruction.style.display = 'flex';
+    }
+  });
+}
+
+// Toggle for final help link
+const finalHelp = document.getElementById('helpLinkFinal');
+const finalInstruction = document.getElementById('finalInstruction');
+if (finalHelp && finalInstruction) {
+  finalHelp.addEventListener('click', function() {
+    if (finalInstruction.style.display === 'flex') {
+      finalInstruction.style.display = 'none';
+    } else {
+      finalInstruction.style.display = 'flex';
+    }
+  });
+}
 </script>
 </body>
 </html>
+
